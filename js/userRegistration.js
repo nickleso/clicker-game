@@ -1,5 +1,4 @@
 import { save } from "./localStorage.js";
-import { gameInfo } from "./refs.js";
 
 export function onRegisterFormSubmit(event) {
   event.preventDefault();
