@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Clicker game" />
+    <title>Clicker game</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <h1>Clicker game</h1>
+
+    <header>
+      <p id="player-name">Player</p>
+      <p>Clicks: <span id="clicks">0</span></p>
+      <p>Level: <span id="current-level">1</span></p>
+      <p>HP: <span id="current-hp">5</span></p>
+    </header>
+
+    <div class="register" id="register-section">
+      <p class="register-title">Create new player</p>
+      <form class="form" id="register-form">
+        <label class="label-name"
+          >Your name
+          <input
+            type="text"
+            placeholder="name"
+            class="input-name"
+            name="name"
+            autofocus
+            autocomplete="off"
+          />
+        </label>
+        <label class="label-email"
+          >Your email
+          <input
+            type="email"
+            placeholder="email"
+            class="input-email"
+            name="email"
+            autocomplete="off"
+          />
+        </label>
+        <button type="submit" class="form-button">Create</button>
+      </form>
+    </div>
+
+    <div>
+      <button type="button" data-clicker>coin1</button>
+      <button type="button" data-clicker>coin2</button>
+      <button type="button" data-clicker>coin3</button>
+      <button type="button" data-clicker>coin4</button>
+      <button type="button" data-clicker>coin5</button>
+    </div>
+
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
