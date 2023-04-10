@@ -1,30 +1,58 @@
-import { stats } from "./js/gameLevelStats.js";
-import { addMarkupLevel1 } from "./js/gameMarkup.js";
 import { load } from "./js/localStorage.js";
-import { gameField, gameInfo, register } from "./js/refs.js";
+import { stats } from "./js/gameLevelStats.js";
 import { onRegisterFormSubmit } from "./js/userRegistration.js";
+import { registrationMarkup } from "./js/markups/registrationMarkup.js";
 
-// user registration
-register.addEventListener("submit", onRegisterFormSubmit);
+import {
+  markupLevel1,
+  markupLevel2,
+  markupLevel3,
+  markupLevel4,
+} from "./js/markups/gameMarkup.js";
 
-// player name
-const savedUser = load("user");
-const player = savedUser ? savedUser.name : "Player";
-gameInfo.playerName.textContent = player;
+import {
+  registrationContainer,
+  gameField,
+  gameInfo,
+  gameSection,
+} from "./js/refs.js";
+import { messagesMarkup } from "./js/markups/messagesMarkup.js";
 
 // total clicks
 let hits = 0;
 
-// render game field
-const clickers = [0];
-// const field1 = addMarkupLevel1();
+// game fields
+const gameField1 = markupLevel1();
+const gameField2 = markupLevel2();
+const gameField3 = markupLevel3();
+const gameField4 = markupLevel4();
 
-appendGameField(clickers);
+// check user registration
+userRegistrationChecker();
 
-export function appendGameField(clickers) {
-  gameField.insertAdjacentHTML("beforeend", addMarkupLevel1(clickers));
+export function userRegistrationChecker() {
+  const isUserExists = load("user");
 
-  // button click counter
+  if (isUserExists) {
+    gameSection.style.display = "block";
+    gameInfo.playerName.textContent = isUserExists.name;
+    return gameStart();
+  }
+
+  registrationContainer.insertAdjacentHTML("beforeend", registrationMarkup());
+
+  const register = document.getElementById("register-form");
+  register.addEventListener("submit", onRegisterFormSubmit);
+}
+
+// game start
+function gameStart() {
+  appendGameField(gameField1);
+}
+
+function appendGameField(markup) {
+  // level 1
+  gameField.insertAdjacentHTML("beforeend", markup);
   const buttonClicker = document.querySelectorAll("[data-clicker]");
 
   buttonClicker.forEach((button) => {
@@ -32,10 +60,25 @@ export function appendGameField(clickers) {
   });
 }
 
-function onButtonClickerClick(event) {
-  console.dir(event.target);
+// messages between levels and start of a new level
+function appendGameMessageAndStartNextLevel(level, hits, levelMarkup) {
+  gameField.insertAdjacentHTML(
+    "beforeend",
+    messagesMarkup(level, hits, "00:20", levelMarkup)
+  );
+  const messageButton = document.getElementById("message-button");
 
-  console.log(event.target.className);
+  messageButton.addEventListener("click", onMessageButtonClick);
+
+  function onMessageButtonClick() {
+    gameField.innerHTML = "";
+    appendGameField(gameField1);
+    appendGameField(gameField2);
+  }
+}
+
+// button click counter
+function onButtonClickerClick(event) {
   event.target.className = "clicker-button-clicked";
 
   hits += 1;
@@ -45,41 +88,60 @@ function onButtonClickerClick(event) {
 
 // game logic
 function gameConditionsChecker() {
-  console.log(hits);
-  // level 1
+  // level 2
   if (hits === stats[0].health) {
-    alert("Level 1 completed!");
+    // alert("Level 1 completed!");
     gameInfo.currentLevel.textContent = stats[1].level;
     gameInfo.currentEnemyHp.textContent = stats[1].health;
 
-    // appendGameField([1, 2]);
+    appendGameMessageAndStartNextLevel(stats[1].level, hits, "00:20");
+
+    // appendGameField(gameField1);
+    // appendGameField(gameField2);
+    return;
   }
 
-  // level 2
+  // level 3
   if (hits - stats[1].difference === stats[1].health) {
     alert("Level 2 completed!");
     gameInfo.currentLevel.textContent = stats[2].level;
     gameInfo.currentEnemyHp.textContent = stats[2].health;
+
+    gameField.innerHTML = "";
+    appendGameField(gameField3);
+    return;
   }
 
-  // level 3
+  // level 4
   if (hits - stats[2].difference === stats[2].health) {
     alert("Level 3 completed!");
     gameInfo.currentLevel.textContent = stats[3].level;
     gameInfo.currentEnemyHp.textContent = stats[3].health;
+
+    gameField.innerHTML = "";
+    appendGameField(gameField1);
+    appendGameField(gameField2);
+    appendGameField(gameField4);
+    return;
   }
 
-  // level 4
+  // level 5
   if (hits - stats[3].difference === stats[3].health) {
     alert("Level 4 completed!");
     gameInfo.currentLevel.textContent = stats[4].level;
     gameInfo.currentEnemyHp.textContent = stats[4].health;
+
+    gameField.innerHTML = "";
+    appendGameField(gameField1);
+    appendGameField(gameField2);
+    appendGameField(gameField3);
+    return;
   }
 
-  // level 5
+  // game over
   if (hits - stats[4].difference === stats[4].health) {
     alert("Level 5 completed! Game finished!");
 
-    // finish game here
+    return;
   }
 }

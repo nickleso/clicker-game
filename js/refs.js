@@ -1,4 +1,5 @@
-export const register = document.getElementById("register-form");
+export const registrationContainer = document.getElementById("container");
+export const gameSection = document.getElementById("game");
 
 export const gameInfo = {
   playerName: document.getElementById("player-name"),
@@ -8,5 +9,3 @@ export const gameInfo = {
 };
 
 export const gameField = document.getElementById("game-field");
-
-// export const buttonClicker = document.querySelectorAll("[data-clicker]");

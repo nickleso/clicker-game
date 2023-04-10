@@ -1,9 +1,9 @@
+@import "./styles/gameItems.css";
+
 body {
   background-color: antiquewhite;
-
-  height: 100vh;
-
-  overflow-x: hidden;
+  /* height: 100vh; */
+  /* overflow-x: hidden; */
 }
 
 h1,
@@ -32,40 +32,64 @@ button {
 
 .container {
   margin: 0 auto;
-  padding: 20px;
   color: #6a6d6f;
 }
 
-.header {
-  padding-top: 20px;
+/* register form styles */
+.title {
+  text-align: center;
+}
+
+.register {
+  margin: 0 auto;
+  padding-top: 36px;
+  width: 300px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 36px;
 }
 
-/* register form styles */
-.register {
-  padding: 20px 0;
+.form {
   display: flex;
+  flex-direction: column;
   gap: 36px;
+}
+
+.form-title {
+  text-align: center;
 }
 
 /* game field styles */
-.game-field {
-  /* padding-top: 20px; */
-  height: 60vh;
+.game {
+  display: none;
+  position: relative;
+  background-color: #007ced;
+}
+
+.game-header {
+  z-index: 5;
+  position: absolute;
+  left: 50%;
+  padding-top: 12px;
+  transform: translateX(-50%);
+  cursor: default;
+}
+
+.game-stats {
+  display: flex;
+  gap: 28px;
+}
+
+.game-field-wrap {
+  height: 100vh;
 
   background-color: #007ced;
   background: linear-gradient(to bottom, #007ced 1%, #cce7ff 100%);
   overflow: hidden;
 }
 
-/* .clicker-list {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-} */
-
-.clicker-list {
+.clicker-list1 {
   position: relative;
   height: 100%;
   background: url(https://static.radulescu.me/examples/clouds/clouds1000.png);
@@ -77,10 +101,12 @@ button {
   animation: wind 20s linear infinite;
 }
 
-/* .clicker-item {
+.clicker-list2 {
   position: relative;
-  animation: wind 20s linear infinite;
-} */
+  height: 100%;
+  background: url("./images/sky2.jpg") repeat-x;
+  animation: cloudani 20s linear infinite;
+}
 
 .clicker-button {
   width: 50px;
@@ -95,7 +121,8 @@ button {
 }
 
 .clicker-button-clicked {
-  width: 50px;
+  display: none;
+  /* width: 50px;
   height: 50px;
   background-image: url(./images/bomber1.png);
   background-size: cover;
@@ -103,49 +130,10 @@ button {
   background-color: transparent;
   border-color: transparent;
 
-  background-color: red;
+  background-color: red; */
 }
 
-.clicker-item1 {
-  position: absolute;
-  left: 40%;
-  top: 5%;
-  z-index: 3;
-  animation: plainfly 11s linear infinite;
-}
-
-.clicker-item2 {
-  position: absolute;
-  left: 40%;
-  top: 25%;
-  z-index: 3;
-  animation: plainfly 9s linear infinite;
-}
-
-.clicker-item3 {
-  position: absolute;
-  left: 40%;
-  top: 45%;
-  z-index: 3;
-  animation: plainfly 10s linear infinite;
-}
-
-.clicker-item4 {
-  position: absolute;
-  left: 40%;
-  top: 65%;
-  z-index: 3;
-  animation: plainfly 8s linear infinite;
-}
-
-.clicker-item5 {
-  position: absolute;
-  left: 40%;
-  top: 85%;
-  z-index: 3;
-  animation: plainfly 12s linear infinite;
-}
-
+/* animations */
 @keyframes wind {
   100% {
     background-position: 0 200px, 0 300px, 100px 250px;
@@ -155,29 +143,11 @@ button {
   }
 }
 
-@keyframes plainfly {
-  0% {
-    left: -10%;
-    transform: scale(0.4);
-  }
-  50% {
-    left: 110%;
-    transform: scale(1);
-  }
-  51% {
-    transform: rotateY(180deg);
-  }
+@keyframes cloudani {
   100% {
-    left: -10%;
-    transform: scale(1.4) rotateY(180deg);
+    background-position: 0 0;
+  }
+  0% {
+    background-position: 100% 0;
   }
 }
-
-/* @keyframes animateCloud {
-  0% {
-    margin-left: -1000px;
-  }
-  100% {
-    margin-left: 100%;
-  }
-} */

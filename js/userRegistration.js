@@ -1,4 +1,6 @@
+import { userRegistrationChecker } from "../index.js";
 import { save } from "./localStorage.js";
+import { registrationContainer } from "./refs.js";
 
 export function onRegisterFormSubmit(event) {
   event.preventDefault();
@@ -13,6 +15,7 @@ export function onRegisterFormSubmit(event) {
 
   save("user", { name, email });
 
-  // зразу викликати зміну імені в хедері, але якщо хедер буде наступним вікном то не треба
-  // gameInfo.playerName.textContent = player;
+  userRegistrationChecker();
+
+  registrationContainer.innerHTML = "";
 }

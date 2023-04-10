@@ -4,57 +4,44 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Clicker game" />
-    <title>Clicker game</title>
+    <meta
+      name="description"
+      content="AAnti-Aircraft Gunner - small both mobile and descktop video game"
+    />
+    <title>Anti-Aircraft Gunner</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="index.css" />
   </head>
 
   <body>
     <main>
-      <div class="container">
-        <h1>Clicker game</h1>
+      <div class="container" id="container"></div>
 
-        <header class="header">
-          <p id="player-name">Player</p>
-          <p>Hits: <span id="clicks">0</span></p>
-          <p>Level: <span id="current-level">1</span></p>
-          <p>HP: <span id="current-hp">5</span></p>
+      <section class="game" id="game">
+        <header class="game-header">
+          <ul class="game-stats">
+            <li><p id="player-name">Player</p></li>
+            <li>
+              <p>Level: <span id="current-level">1</span></p>
+            </li>
+            <li>
+              <p>Planes: <span id="current-hp">5</span></p>
+            </li>
+            <li>
+              <p>Hits: <span id="clicks">0</span></p>
+            </li>
+            <li>
+              <p>Time: <span id="timer">00:00</span></p>
+            </li>
+          </ul>
         </header>
-
-        <div class="register" id="register-section">
-          <p class="register-title">Create new player</p>
-          <form class="form" id="register-form">
-            <label class="label-name"
-              >Your name
-              <input
-                type="text"
-                placeholder="name"
-                class="input-name"
-                name="name"
-                autofocus
-                autocomplete="off"
-              />
-            </label>
-            <label class="label-email"
-              >Your email
-              <input
-                type="email"
-                placeholder="email"
-                class="input-email"
-                name="email"
-                autocomplete="off"
-              />
-            </label>
-            <button type="submit" class="form-button">Create</button>
-          </form>
+        <div class="game-field-wrap">
+          <ul id="game-field" class="clicker-list1"></ul>
         </div>
-
-        <div class="game-field" id="game-field"></div>
-      </div>
+      </section>
     </main>
 
     <script src="index.js" type="module"></script>
