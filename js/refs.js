@@ -1,6 +1,8 @@
 export const registrationContainer = document.getElementById("container");
 export const gameSection = document.getElementById("game");
+export const gameField = document.getElementById("game-field");
 
+// header game stats
 export const gameInfo = {
   playerName: document.getElementById("player-name"),
   hits: document.getElementById("clicks"),
@@ -8,4 +10,9 @@ export const gameInfo = {
   currentEnemyHp: document.getElementById("current-hp"),
 };
 
-export const gameField = document.getElementById("game-field");
+// timer refs
+export const indicators = {
+  minutesGone: document.querySelector("[data-minutes]"),
+  secondsGone: document.querySelector("[data-seconds]"),
+  millisecondsGone: document.querySelector("[data-milliseconds]"),
+};

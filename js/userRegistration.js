@@ -1,5 +1,5 @@
 import { userRegistrationChecker } from "../index.js";
-import { save } from "./localStorage.js";
+import { save } from "./helpers/localStorage.js";
 import { registrationContainer } from "./refs.js";
 
 export function onRegisterFormSubmit(event) {

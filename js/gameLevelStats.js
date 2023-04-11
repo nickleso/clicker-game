@@ -1,5 +1,8 @@
 export const stats = [
   {
+    level: 0,
+  },
+  {
     level: 1,
     health: 5,
     difference: 0,

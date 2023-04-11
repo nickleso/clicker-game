@@ -1,4 +1,5 @@
 @import "./styles/gameItems.css";
+@import "./styles/timer.css";
 
 body {
   background-color: antiquewhite;
@@ -71,14 +72,20 @@ button {
   z-index: 5;
   position: absolute;
   left: 50%;
-  padding-top: 12px;
+  padding: 4px 8px;
   transform: translateX(-50%);
   cursor: default;
+
+  background-color: #cce7ff89;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .game-stats {
   display: flex;
-  gap: 28px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
 }
 
 .game-field-wrap {
