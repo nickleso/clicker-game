@@ -1,3 +1,10 @@
+export const gameLevels = {
+  gameLevel1: markupLevel1(),
+  gameLevel2: markupLevel2(),
+  gameLevel3: markupLevel3(),
+  gameLevel4: markupLevel4(),
+};
+
 export function markupLevel1() {
   return `<li class="clicker-item1">
         <button class="clicker-button" type="button" data-clicker></button>

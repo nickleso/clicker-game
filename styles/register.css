@@ -1,0 +1,65 @@
+.register-background {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/dramatic-clouds.jpg);
+  background-size: cover;
+}
+
+.register {
+  height: 400px;
+  padding: 54px 20px;
+  width: 310px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+
+  background-image: url(../images/paper-scroll.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.register-title {
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.form-title {
+  text-align: center;
+}
+
+.input-name:invalid,
+.input-email:invalid {
+  background: #fdd;
+}
+
+.form-input:valid {
+  background: #dfd;
+}
+
+.form-label {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-input {
+  color: #535353;
+  border: 1px solid #c3c7ca;
+  transition: border-color 250ms var(--timing-function);
+  border-radius: 5px;
+  outline: none;
+}
+
+.form-input:hover,
+.form-input:focus {
+  border: 1px solid #6e798c;
+  outline: transparent;
+}

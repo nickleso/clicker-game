@@ -1,0 +1,28 @@
+.game-header {
+  z-index: 5;
+  position: absolute;
+  left: 50%;
+  padding: 4px 8px;
+  transform: translateX(-50%);
+  cursor: default;
+
+  background-color: #cce7ff89;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+@media screen and (min-width: 500px) {
+  .game-header {
+    width: 500px;
+    left: 0;
+    transform: translateX(0);
+    border-bottom-left-radius: 0px;
+  }
+}
+
+.game-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 16px;
+}

@@ -1,0 +1,21 @@
+/* message styles */
+.message {
+  z-index: 100;
+  position: absolute;
+  height: 400px;
+  padding: 54px 20px;
+  width: 310px;
+  top: 50vh;
+  left: 50vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+  transform: translate(-50%, -50%);
+
+  background-image: url(../images/paper-scroll.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}

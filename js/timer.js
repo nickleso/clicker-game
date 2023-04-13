@@ -1,15 +1,29 @@
-import { indicators } from "../js/refs.js";
-import { convertMs, updateClockface } from "./helpers/timeConverter.js";
+import { load, save } from "./helpers/localStorage.js";
+import { convertMs } from "./helpers/timeConverter.js";
+import { updateBestClockface, updateClockface } from "./updateInterface.js";
 
 // initial state
 let intervalId = null;
 let startTime = 0;
 let currentTime = 0;
 let pauseTime = 0;
+let recordTime = 0;
 export let stopwatchTime = 0;
 
 // flags
 let firstStart = true;
+let firstLocalTry = true;
+
+// load records from local storage
+localRecordChecker();
+export function localRecordChecker() {
+  const isRecordExists = load("record");
+
+  if (isRecordExists) {
+    recordTime = isRecordExists.recordTime;
+    updateBestClockface(convertMs(recordTime));
+  }
+}
 
 // start timer
 export function timerStart() {
@@ -35,12 +49,21 @@ export function timerPause() {
 }
 
 // reset timer
-function timerReset() {
-  indicators.hoursGone.textContent = "00";
-  indicators.minutesGone.textContent = "00";
-  indicators.secondsGone.textContent = "00";
-  indicators.millisecondsGone.textContent = "00";
-
+export function timerReset() {
   clearInterval(intervalId);
+
+  if (firstLocalTry) {
+    recordTime = stopwatchTime;
+    save("record", { recordTime });
+    updateBestClockface(convertMs(stopwatchTime));
+  }
+
+  if (stopwatchTime < recordTime) {
+    recordTime = stopwatchTime;
+    save("record", { recordTime });
+    updateBestClockface(convertMs(recordTime));
+  }
+
   firstStart = true;
+  firstLocalTry = false;
 }
