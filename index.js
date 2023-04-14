@@ -23,10 +23,7 @@ import {
   timerStart,
 } from "./js/timer.js";
 import { convertMs } from "./js/helpers/timeConverter.js";
-import {
-  updateBestClockface,
-  updateMessageClockface,
-} from "./js/updateInterface.js";
+import { updateMessageClockface } from "./js/updateInterface.js";
 
 import { onGoNextMessageButtonClick } from "./js/nextLevelsRender.js";
 
@@ -81,7 +78,7 @@ function onButtonClickerClick(event) {
   gameInfo.hits.textContent = hits;
 
   const hitBang = new Audio();
-  hitBang.src = "./audio/explosion-distant.mp3";
+  hitBang.src = "./assets/audio/explosion-distant.mp3";
   hitBang.play();
 
   gameConditionsChecker();

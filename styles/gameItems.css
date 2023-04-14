@@ -3,7 +3,7 @@
   z-index: 100;
   width: 50px;
   height: 50px;
-  background-image: url(../images/bomber1.png);
+  background-image: url(../assets/images/bomber1.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-color: transparent;
@@ -21,7 +21,7 @@
   z-index: 100;
   width: 100px;
   height: 100px;
-  background-image: url(../images/boom-effect.png);
+  background-image: url(../assets/images/boom-effect.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-color: transparent;
@@ -81,7 +81,7 @@
 .clicker-item33,
 .clicker-item34,
 .clicker-item35 {
-  z-index: 100;
+  z-index: 90;
   position: absolute;
   right: 40%;
 }
@@ -89,179 +89,179 @@
 /* level 1 and 2 */
 .clicker-item1 {
   top: 8%;
-  animation: plainflyStright 12s linear infinite;
+  animation: plainflyStright 16s linear infinite;
 }
 
 .clicker-item2 {
   top: 25%;
-  animation: plainflyStright 10s linear infinite;
+  animation: plainflyStright 14s linear infinite;
 }
 
 .clicker-item3 {
   top: 45%;
-  animation: plainflyStright 11s linear infinite;
+  animation: plainflyStright 15s linear infinite;
 }
 
 .clicker-item4 {
   top: 65%;
-  animation: plainflyStright 9s linear infinite;
+  animation: plainflyStright 13s linear infinite;
 }
 
 .clicker-item5 {
   top: 85%;
-  animation: plainflyStright 13s linear infinite;
+  animation: plainflyStright 17s linear infinite;
 }
 
 .clicker-item6 {
   top: 13%;
-  animation: plainflyStright 11s linear infinite;
+  animation: plainflyStright 15s linear infinite;
 }
 
 .clicker-item7 {
   top: 35%;
-  animation: plainflyStright 8s linear infinite;
+  animation: plainflyStright 12s linear infinite;
 }
 
 .clicker-item8 {
   top: 55%;
-  animation: plainflyStright 7s linear infinite;
+  animation: plainflyStright 11s linear infinite;
 }
 
 .clicker-item9 {
   top: 75%;
-  animation: plainflyStright 14s linear infinite;
+  animation: plainflyStright 18s linear infinite;
 }
 
 .clicker-item10 {
   top: 90%;
-  animation: plainflyStright 11s linear infinite;
+  animation: plainflyStright 15s linear infinite;
 }
 
 /* level 3 */
 .clicker-item11 {
   top: 5%;
-  animation: plainflyTop 11s linear infinite;
+  animation: plainflyTop 15s linear infinite;
 }
 
 .clicker-item12 {
   top: 10%;
-  animation: plainflyTop 8s linear infinite;
+  animation: plainflyTop 12s linear infinite;
 }
 
 .clicker-item13 {
   top: 15%;
-  animation: plainflyTop 7s linear infinite;
+  animation: plainflyTop 11s linear infinite;
 }
 
 .clicker-item14 {
   top: 20%;
-  animation: plainflyTop 14s linear infinite;
+  animation: plainflyTop 18s linear infinite;
 }
 
 .clicker-item15 {
   top: 25%;
-  animation: plainflyTop 10s linear infinite;
+  animation: plainflyTop 14s linear infinite;
 }
 
 .clicker-item16 {
   top: 17%;
-  animation: plainflyTop 13s linear infinite;
+  animation: plainflyTop 17s linear infinite;
 }
 
 .clicker-item17 {
   top: 30%;
-  animation: plainflyTop 10s linear infinite;
+  animation: plainflyTop 19s linear infinite;
 }
 
 .clicker-item18 {
   top: 35%;
-  animation: plainflyTop 9s linear infinite;
+  animation: plainflyTop 13s linear infinite;
 }
 
 .clicker-item19 {
   top: 40%;
-  animation: plainflyTop 12s linear infinite;
+  animation: plainflyTop 16s linear infinite;
 }
 
 .clicker-item20 {
   top: 45%;
-  animation: plainflyTop 11s linear infinite;
+  animation: plainflyTop 15s linear infinite;
 }
 
 .clicker-item21 {
   top: 50%;
-  animation: plainflyTop 13s linear infinite;
+  animation: plainflyTop 17s linear infinite;
 }
 
 .clicker-item22 {
   top: 55%;
-  animation: plainflyTop 14s linear infinite;
+  animation: plainflyTop 18s linear infinite;
 }
 
 .clicker-item23 {
   top: 60%;
-  animation: plainflyTop 7s linear infinite;
+  animation: plainflyTop 11s linear infinite;
 }
 
 .clicker-item24 {
   top: 65%;
-  animation: plainflyTop 9s linear infinite;
+  animation: plainflyTop 13s linear infinite;
 }
 
 .clicker-item25 {
   top: 70%;
-  animation: plainflyTop 10s linear infinite;
+  animation: plainflyTop 14s linear infinite;
 }
 
 /* additional for level 4 */
 .clicker-item26 {
   top: 8%;
-  animation: plainflyStrightInverse 12s linear infinite;
+  animation: plainflyStrightInverse 16s linear infinite;
 }
 
 .clicker-item27 {
   top: 25%;
-  animation: plainflyStrightInverse 10s linear infinite;
+  animation: plainflyStrightInverse 14s linear infinite;
 }
 
 .clicker-item28 {
   top: 45%;
-  animation: plainflyStrightInverse 11s linear infinite;
+  animation: plainflyStrightInverse 15s linear infinite;
 }
 
 .clicker-item29 {
   top: 65%;
-  animation: plainflyStrightInverse 9s linear infinite;
+  animation: plainflyStrightInverse 13s linear infinite;
 }
 
 .clicker-item30 {
   top: 85%;
-  animation: plainflyStrightInverse 13s linear infinite;
+  animation: plainflyStrightInverse 17s linear infinite;
 }
 
 .clicker-item31 {
   top: 13%;
-  animation: plainflyStrightInverse 11s linear infinite;
+  animation: plainflyStrightInverse 15s linear infinite;
 }
 
 .clicker-item32 {
   top: 35%;
-  animation: plainflyStrightInverse 8s linear infinite;
+  animation: plainflyStrightInverse 12s linear infinite;
 }
 
 .clicker-item33 {
   top: 55%;
-  animation: plainflyStrightInverse 7s linear infinite;
+  animation: plainflyStrightInverse 11s linear infinite;
 }
 
 .clicker-item34 {
   top: 75%;
-  animation: plainflyStrightInverse 14s linear infinite;
+  animation: plainflyStrightInverse 18s linear infinite;
 }
 
 .clicker-item35 {
   top: 90%;
-  animation: plainflyStrightInverse 11s linear infinite;
+  animation: plainflyStrightInverse 15s linear infinite;
 }
 
 /* animations */

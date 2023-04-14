@@ -1,3 +1,4 @@
+// stats data about game interactive objects
 export const stats = [
   {
     level: 0,

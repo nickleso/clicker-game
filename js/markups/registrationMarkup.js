@@ -1,3 +1,4 @@
+// registration form for new user
 export function registrationMarkup() {
   return `<div class="register-background">
           <section class="register" id="register-section">
@@ -31,7 +32,7 @@ export function registrationMarkup() {
                 required
               />
             </label>
-            <button type="submit" class="form-button">Create player and start the game!</button>
+            <button type="submit" class="button">Create player and start the game!</button>
           </form>
           </div>
         </section>`;

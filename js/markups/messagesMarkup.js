@@ -1,3 +1,4 @@
+// messeges between levels and game over message
 export function messagesMarkup(level, hits) {
   return `<div class="message">
           <p>Level ${level} completed!</p>

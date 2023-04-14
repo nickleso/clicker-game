@@ -1,65 +1,7 @@
+@import "./styles/base.css";
 @import "./styles/headerStats.css";
 @import "./styles/register.css";
 @import "./styles/gameField.css";
 @import "./styles/gameItems.css";
 @import "./styles/timer.css";
 @import "./styles/message.css";
-
-:root {
-  --home-card-main: rgba(0, 0, 0, 0.87);
-  --home-card-secondary: rgba(0, 0, 0, 0.6);
-  --input-color: rgba(0, 0, 0, 0.5);
-
-  --char-primary-color: #081f32;
-  --char-secondary-color: #8e8e93;
-  --char-features-color: #6e798c;
-
-  --active-color: rgb(8, 150, 126);
-
-  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-body {
-  height: 100vh;
-  cursor: url("./images/aim.png"), auto;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.button {
-  padding: 4px 8px;
-  color: #535353;
-  background-color: #fff;
-  border: 1px solid #c3c7ca;
-  border-radius: 5px;
-  cursor: pointer;
-
-  transition: border-color 250ms var(--timing-function),
-    background-color 250ms var(--timing-function),
-    color 250ms var(--timing-function);
-}
-
-.button:hover,
-.button:focus {
-  color: #fff;
-  background-color: #6e798c;
-  border: 1px solid #6e798c;
-  outline: transparent;
-}

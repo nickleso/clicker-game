@@ -2,6 +2,7 @@ import { userRegistrationChecker } from "../index.js";
 import { save } from "./helpers/localStorage.js";
 import { registrationContainer } from "./refs.js";
 
+// user registration logic
 export function onRegisterFormSubmit(event) {
   event.preventDefault();
   const form = event.target;

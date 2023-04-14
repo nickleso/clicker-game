@@ -1,3 +1,4 @@
+// save, load and remove data from browsers local storage
 export function save(key, value) {
   try {
     const serializedState = JSON.stringify(value);

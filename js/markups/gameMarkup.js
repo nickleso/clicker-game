@@ -1,3 +1,4 @@
+// markup with clicked buttons for different game levels
 export const gameLevels = {
   gameLevel1: markupLevel1(),
   gameLevel2: markupLevel2(),

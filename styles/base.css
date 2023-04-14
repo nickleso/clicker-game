@@ -1,0 +1,59 @@
+:root {
+  --main-light: #fff;
+  --main-dark: #2d3137;
+  --secondary-color: #535353;
+  --background-color: #007ced;
+  --header-color: #c1d5e8ca;
+
+  --active-color: #6e798c;
+  --valid-color: #dfd;
+  --invalid-color: #fdd;
+
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  height: 100vh;
+  font-family: "Karla";
+  color: var(--main-dark);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.button {
+  padding: 4px 8px;
+  color: var(--secondary-color);
+  background-color: var(--main-light);
+  border: 1px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+
+  transition: border-color 250ms var(--timing-function),
+    background-color 250ms var(--timing-function),
+    color 250ms var(--timing-function);
+}
+
+.button:hover,
+.button:focus {
+  color: var(--main-light);
+  background-color: var(--active-color);
+  border: 1px solid var(--active-color);
+  outline: transparent;
+}

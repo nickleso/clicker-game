@@ -1,6 +1,6 @@
 import { indicators } from "./refs.js";
 
-// update interface
+// update timer interface
 export function updateClockface({ minutes, seconds, trimedMsec }) {
   indicators.minutesGone.textContent = minutes;
   indicators.secondsGone.textContent = seconds;

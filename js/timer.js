@@ -13,12 +13,11 @@ export let stopwatchTime = 0;
 // flags
 let firstStart = true;
 let firstLocalTry = true;
+const isRecordExists = load("record");
 
 // load records from local storage
 localRecordChecker();
 export function localRecordChecker() {
-  const isRecordExists = load("record");
-
   if (isRecordExists) {
     recordTime = isRecordExists.recordTime;
     updateBestClockface(convertMs(recordTime));
@@ -52,7 +51,7 @@ export function timerPause() {
 export function timerReset() {
   clearInterval(intervalId);
 
-  if (firstLocalTry) {
+  if (firstLocalTry && !isRecordExists) {
     recordTime = stopwatchTime;
     save("record", { recordTime });
     updateBestClockface(convertMs(stopwatchTime));

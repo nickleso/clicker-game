@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(../images/dramatic-clouds.jpg);
+  background-image: url(../assets/images/dramatic-clouds.jpg);
   background-size: cover;
 }
 
@@ -17,7 +17,7 @@
   align-items: center;
   gap: 36px;
 
-  background-image: url(../images/paper-scroll.png);
+  background-image: url(../assets/images/paper-scroll.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -38,11 +38,11 @@
 
 .input-name:invalid,
 .input-email:invalid {
-  background: #fdd;
+  background-color: var(--invalid-color);
 }
 
 .form-input:valid {
-  background: #dfd;
+  background-color: var(--valid-color);
 }
 
 .form-label {
@@ -51,7 +51,7 @@
 }
 
 .form-input {
-  color: #535353;
+  color: var(--secondary-color);
   border: 1px solid #c3c7ca;
   transition: border-color 250ms var(--timing-function);
   border-radius: 5px;
@@ -60,6 +60,6 @@
 
 .form-input:hover,
 .form-input:focus {
-  border: 1px solid #6e798c;
+  border: 1px solid var(--active-color);
   outline: transparent;
 }
